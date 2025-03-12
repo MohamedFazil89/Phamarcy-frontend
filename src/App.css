@@ -1,0 +1,45 @@
+html, body{
+    scroll-behavior: smooth;
+  }
+  
+  body{
+    background-color: #ffe3e3;
+    overflow-x: hidden;
+  }
+  
+  .Cart-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  
+  
+  }
+  
+  .Product-section-title{
+    color: white;
+    font-size: 3rem;
+    margin-left: 1rem;
+    text-decoration: underline;
+  }
+  
+  /* Login css */
+  
+  .Login-Container{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  @media (max-width: 600px) {
+    .Product-section-title{
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 400px){
+    .Product-section-title{
+      font-size: 1.5rem;
+    }
+  } 
+  

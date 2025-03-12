@@ -1,0 +1,71 @@
+/* Update.css */
+
+/* Container for the entire section */
+.Product-Categories-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #f4f6f9;
+}
+
+/* Remove default list styles and center the card(s) */
+.List-Card {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+/* Card item styling */
+.item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+/* Hover effect for card */
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Image styling */
+.item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Card text styling */
+.item p {
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+/* Responsive adjustments for tablets and below */
+@media (max-width: 768px) {
+  .item {
+    width: 80%;
+  }
+}
+
+/* Further adjustments for mobile devices */
+@media (max-width: 480px) {
+  .item {
+    width: 90%;
+  }
+  .item p {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+}
