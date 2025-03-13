@@ -9,7 +9,7 @@
   .content-section {
     width: 100%;
     padding: 4rem 1rem;
-    background-color: #161616;
+    background-color: var(--light-color--);
 }
   
   .content-container {
@@ -25,14 +25,14 @@
   .content-text h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: white;
+    color: var(--dark-color--);
   }
   
   .content-text p {
     font-size: 1.125rem;
     line-height: 1.6;
     margin-bottom: 2rem;
-    color: white;
+    color: var(--dark-color--);
   }
   
   /* Primary Button Style */

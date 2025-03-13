@@ -15,9 +15,9 @@ html, body{
   }
   
   .Product-section-title{
-    color: white;
+    color: black;
     font-size: 3rem;
-    margin-left: 1rem;
+    margin: 2rem;
     text-decoration: underline;
   }
   

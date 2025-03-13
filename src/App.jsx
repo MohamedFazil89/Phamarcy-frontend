@@ -1,6 +1,6 @@
 import './App.css'
 import Nav from './components/Nav'
-// import Home from "./components/Hero"
+import Home from "./components/Hero"
 import Update from './components/Update'
 import Cart from './components/Cart'
 import CardData from "./components/CartData.js"
@@ -21,8 +21,9 @@ function App() {
     <>
  <div>
       <Nav />
+      <Home />
       <Slider />
-      <p>Our Products Categories</p>
+      <p className='Product-section-title'>Our Products Categories</p>
 
       <Update />
       <br />

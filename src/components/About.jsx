@@ -5,14 +5,14 @@ export default function About() {
     return (
         <section className='About-Conteiner' id="About">
             <div className="aboutbox">
-                <img src={JinWoo} alt="" className="charcter"/>
-                <p>Weak today, strong tomorrow. Inspired by Solo Leveling, our gym gear is built for those who grind, evolve, and dominate.
+                <p>Your health, our priority. At <span>LoveCare</span>, we provide trusted, high-quality healthcare products to support your well-being.
+                <br />
+                    🌿 Authentic Medicines – Sourced from certified manufacturers.<br />
+                    🚀 Fast & Reliable Delivery – Get what you need, when you need it.<br />
+                    ❤️ Care You Can Trust – Expert advice and customer support.<br />
 
-                    💪 Train like a Hunter – Push limits, break barriers.
-                    ⚡ Unleash Your Potential – Strength is earned, not given.
-                    🔥 Elite Quality & Style – Gear up. Level up.
-
-                    Arise, and become the strongest! ⚔️🔥</p>
+                    Experience convenience, quality, and care – all in one place. Stay healthy, stay safe!
+                </p>
 
             </div>
         </section>

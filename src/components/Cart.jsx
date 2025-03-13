@@ -7,7 +7,7 @@ export default function Cart({ img, title, description, price }) {
             <img src={img} className="card__img" alt={title} />
             </section>
             <div className="card__body">
-                <h3 className="card__price">${price}</h3>
+                <h3 className="card__price">₹{price}</h3>
 
                 <section className="texts">
                     <h2 className="card__title">{title}</h2>

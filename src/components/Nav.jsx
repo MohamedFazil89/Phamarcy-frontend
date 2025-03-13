@@ -1,6 +1,6 @@
 import React from 'react'
 import "./styles/Nav.css"
-import logo from "../assets/logo.png"
+import logo from "../assets/medicareLOGO.png"
 
 export default function Nav() {
   return (
