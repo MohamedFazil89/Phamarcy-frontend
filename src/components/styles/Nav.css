@@ -19,7 +19,6 @@
   }
   .nav > .nav-header > .nav-title {
     font-size: 22px;
-    color: black;
   }
   .nav-title > img{
     width: 100px;
@@ -28,14 +27,15 @@
     display: flex;
     gap: 2rem;
   }
-  .nav > .nav-list > .navCheck > li {
+  .nav > .nav-list > .navCheck > label >  li {
     list-style-type: none;
+    padding: 2rem;
   }
-  .nav > .nav-list > .navCheck >  li a {
+  .nav > .nav-list > .navCheck > label > li > a {
     text-decoration: none;
-    color: black;
     font-size: 1.1rem;
     cursor: pointer;
+    color: black;
   }
   .nav > #nav-check {
       display: none;
@@ -90,7 +90,7 @@
       left: 0;
       overflow: hidden;
     }
-    .nav > .nav-list > .navCheck > li {
+    .nav > .nav-list > .navCheck > label > li > a {
       width: 100%;
       margin-top: 1.5rem;
       color: white;

@@ -17,10 +17,17 @@
   margin-top: 3rem;
   position: relative;
   /* background-color: #3A3A3A; */
-  background:linear-gradient(black, rgb(20, 20, 20));
+  background: linear-gradient(white, lightgreen, white);
   padding: 1rem;
   border-radius: 1rem;
+  box-shadow: 0 0 10px black;
+  transition: .5s;
+  cursor: pointer;
 
+}
+
+.card:hover{
+  transform: translateY(-5px);
 }
 
 .texts {
@@ -51,7 +58,7 @@
 }
 .card__body > *{
   margin-top: 1rem;
-  color: white;
+  color: black;
 
 }
 
@@ -66,18 +73,20 @@
 }
 
 .card__price {
-  color: white;
+  color: black;
  
 
 }
 
 .card__btn {
   all: unset;
-  background-color: white;
+  background-color: lightgreen;
   padding: .5rem;
   text-align: center;
   color: black;
   margin-top: 1rem;
   margin-bottom: 1rem;
   cursor: pointer;
+  transition: all .5s;
 }
+

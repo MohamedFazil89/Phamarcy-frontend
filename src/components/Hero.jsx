@@ -4,7 +4,7 @@ import Solo from "../assets/girlbg.png"
 
 export default function Hero() {
   return (
-    <div className='Hero'>
+    <div className='Hero' id="Home">
 
       <h1>Pharmacy</h1>
 

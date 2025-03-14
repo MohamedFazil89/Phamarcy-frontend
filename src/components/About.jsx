@@ -5,7 +5,7 @@ export default function About() {
     return (
         <section className='About-Conteiner' id="About">
             <div className="aboutbox">
-                <p>Your health, our priority. At <span>LoveCare</span>, we provide trusted, high-quality healthcare products to support your well-being.
+                <p>Your health, our priority. At <span>MediCare</span>, we provide trusted, high-quality healthcare products to support your well-being.
                 <br />
                     🌿 Authentic Medicines – Sourced from certified manufacturers.<br />
                     🚀 Fast & Reliable Delivery – Get what you need, when you need it.<br />

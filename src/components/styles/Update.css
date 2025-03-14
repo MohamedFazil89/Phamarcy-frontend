@@ -29,12 +29,17 @@
   width: 300px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
+  cursor: pointer;
 }
 
 /* Hover effect for card */
 .item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.item:active {
+  transform: translateY(1px);
 }
 
 /* Image styling */
@@ -51,7 +56,9 @@
   color: #333;
   margin: 0;
 }
-
+.item > P::selection{
+  color: forestgreen;
+}
 /* Responsive adjustments for tablets and below */
 @media (max-width: 768px) {
   .item {
