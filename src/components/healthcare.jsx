@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Cart from './Cart';
-import { addToCart } from "../redux/cartSlice";
 
 
 export default function ProductPage() {
@@ -10,7 +9,6 @@ export default function ProductPage() {
   useEffect(() => {
     axios.get("http://localhost:5000/api/products")
       .then(response => {
-        // response.data contains { intakeItems, equipmentItems }
         setData(response.data);
         console.log(response.data);
       })

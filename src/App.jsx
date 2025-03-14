@@ -30,8 +30,8 @@ function App() {
       <br />
       <br />
 
-      <Link to="/Product">
-      <p className='Product-section-title'>Explore Our Proteins</p>
+      <Link to="/HealthCare">
+      <p className='Product-section-title'>Explore Our  New Products</p>
       </Link>
       <div className="Cart-container" id='Proteins'>
         {intakeItems.map((item, index) =>(
@@ -48,8 +48,8 @@ function App() {
       <br />
       <br />
       <br />
-      <Link to="/ProductE">
-      <p className='Product-section-title'>Explore Our Equipment      </p>
+      <Link to="/PersonalCare">
+      <p className='Product-section-title'>Explore Our Best seller</p>
       </Link>
 
       <div className="Cart-container" id='Equipment'>
