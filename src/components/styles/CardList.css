@@ -12,7 +12,7 @@
     right: 0;
     height: 100vh;
     width: 400px; /* Default width for larger screens */
-    background-color: #fff;
+    background-color: rgb(14, 14, 14);
     transition: width 0.5s ease;
     box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
@@ -63,10 +63,11 @@
   .Card-details .Name {
     font-weight: 600;
     margin-bottom: 0.25rem;
+    color: white;
   }
   
   .Card-details .Rate {
-    color: #666;
+    color: white;
     margin-bottom: 0.5rem;
   }
   
@@ -74,7 +75,7 @@
   .Card-details > button {
     align-self: flex-start;
     padding: 0.3rem 0.6rem;
-    background-color: #007bff;
+    background-color: var(--dark-color--);
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -84,7 +85,7 @@
   }
   
   .Card-details > button:hover {
-    background-color: #0056b3;
+    background-color: rgb(115, 233, 115);
   }
   
   /* Total Section fixed at the bottom of the panel */
@@ -92,13 +93,14 @@
     position: fixed;
     bottom: 0;
     width: inherit; /* Match the panel width */
-    background-color: #000;
-    color: #fff;
+    background-color: var(--light-color--);
+    color: black;
     padding: 1rem;
     font-size: 1.2rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+
   }
   
   .total > p {
@@ -110,7 +112,7 @@
   .total > button {
     align-self: flex-start;
     padding: 0.4rem 0.8rem;
-    background-color: #007bff;
+    background-color: var(--dark-color--);
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -120,7 +122,7 @@
   }
   
   .total > button:hover {
-    background-color: #0056b3;
+    background-color: lightgreen;
   }
   
   /* Responsive Adjustments */

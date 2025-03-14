@@ -10,7 +10,7 @@ export default function CardMenu({ width, OpenCard }) {
 
   return (
     <div className="Card-Container" style={{ width: width }}>
-      <p style={{ color: "black", textAlign: "right", cursor: "pointer" }} onClick={OpenCard}>X</p>
+      <p style={{ color: "white", textAlign: "right", cursor: "pointer" }} onClick={OpenCard}>X</p>
 
       <section className="carditem">
         {cartItems.length === 0 ? (
