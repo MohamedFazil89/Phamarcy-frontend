@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Cart from './Cart';
+import { addToCart } from "../redux/cartSlice";
+
+
 export default function ProductPage() {
   const [data, setData] = useState(null);
 
@@ -24,7 +27,7 @@ export default function ProductPage() {
       <ul>
         
         <div className="Cart-container" id='Equipment'>
-          {data.intakeItems.map((item, index) =>(
+          {data.healthcare.map((item, index) =>(
             <Cart
             key={index}
             img={item.img}
