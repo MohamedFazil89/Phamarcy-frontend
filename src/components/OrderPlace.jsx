@@ -7,20 +7,15 @@ export default function OrderPlace() {
     const total = useSelector(state => state.cart.total);
     const cartItems = useSelector(state => state.cart.cartItems);
     const [orderConfirmed, setOrderConfirmed] = useState(true);
-    const [PreviousOrder, setPreviousOrder] = useState(null);
+    const [previousOrders, setPreviousOrders] = useState([]);
 
-    // For demonstration, a sample order item object.
-    // In a real application, you may want to send the entire cartItems array.
-    const NewOrders = {
-        id: 1,
-        img: "String",
-        title: "Title",
-        description: "description",
-        price: "price",
-    };
+    // For demonstration, we're sending the entire cartItems array as the new order.
+    const NewOrders = cartItems;
+
+    // Replace with the actual user's email
+    const userEmail = "nmohammedfazil790@gmail.com";
 
     useEffect(() => {
-        // Confirm order after 3 seconds and post the order.
         const timer = setTimeout(() => {
             setOrderConfirmed(false);
         }, 3000);
@@ -31,12 +26,19 @@ export default function OrderPlace() {
 
     const handelPostFetchOrder = async () => {
         try {
-            const response = await axios.post("http://localhost:5000/OrderPlace", {
-                email: "nmohammedfazil790@gmail.com",
+            // Post the new order
+            const postResponse = await axios.post("http://localhost:5000/OrderPlace", {
+                email: userEmail,
                 NewOrders,
             });
-            console.log("Order placed:", response.data);
-            setPreviousOrder(response.data);
+            console.log("Order placed:", postResponse.data);
+
+            // Fetch order history for the user
+            const getResponse = await axios.get("http://localhost:5000/OrderHistory", {
+                params: { email: userEmail }
+            });
+            console.log("Order history:", getResponse.data);
+            setPreviousOrders(getResponse.data);
         } catch (err) {
             console.error("Error placing order:", err);
         }
@@ -47,7 +49,7 @@ export default function OrderPlace() {
         {!orderConfirmed ? (
             <div className='Order-container'>
                 <div className="Ordered-Cart-items">
-                    <h1 style={{ margin: "1rem" }}>Order confirmed!</h1>
+                    <h1 style={{ margin: "1rem" }}> confirmed Order!</h1>
                     {cartItems.map((item, index) => (
                         <div key={item.id || `cart-item-${index}`} className="Ordered-carditem">
                             <img src={item.img} alt={item.title} className="Ordered-Item-image" />
@@ -57,22 +59,26 @@ export default function OrderPlace() {
                             </span>
                         </div>
                     ))}
-                    <p className='Ordered-Total'>Payment Successful</p>
-                    <p className='Ordered-deviler'>Order delivered in 2 days</p>
+                   {cartItems != "" ? <p className='Ordered-Total'>Payment Successful</p> : ""}
+                    {cartItems != "" ? <p className='Ordered-deviler'>Order delivered in 2 days</p> 
+                    : <p className='Ordered-deviler'>Empty Cart</p>}
                 </div>
                 <p className='Ordered-history-title'>Order History</p>
                 <section className="ordered-history-items">
-                    {PreviousOrder ? (
-                        <div>
-                            <p>User: {PreviousOrder.user}</p>
-                            {PreviousOrder.OrderItems.map((orderItem, idx) => (
-                                <div key={orderItem.id || idx}>
-                                    <p>{orderItem.title}</p>
-                                    <p>{orderItem.description}</p>
-                                    <p>${orderItem.price}</p>
-                                </div>
-                            ))}
-                        </div>
+                    {previousOrders.length > 0 ? (
+                        previousOrders.map((order, index) => (
+                            <div key={order._id || index} className="order-history">
+                                {order.OrderItems.map((orderItem, idx) => (
+                                    <div key={orderItem.id || idx} className="order-history-card">
+                                        <img src={orderItem.img} alt={orderItem.title} className="order-history-img" />
+                                        <div className="order-history-details">
+                                            <p className="order-history-title">{orderItem.title}</p>
+                                            <p className="order-history-description">{orderItem.description}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        ))
                     ) : (
                         <p>No previous orders</p>
                     )}

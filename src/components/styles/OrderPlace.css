@@ -1,143 +1,256 @@
 /* Global Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Order Confirmation Section */
-  .orderConfirm {
-    background-color: var(--light-color--);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 2rem;
-    font-size: 5rem;
-    color: black;
-    font-weight: 900;
-  }
-  
-  /* Order Container (holds all ordered items) */
-  .Order-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    margin-top: 2rem;
-  }
-  
-  /* Ordered Cart Items - a vertical list of items */
-  .Ordered-Cart-items {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    width: 100%;
-    max-width: 800px;
-  }
-  
-  /* Each Ordered Card Item */
-  .Ordered-carditem {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    margin: 1rem 0;
-  }
-  
-  /* Item Image styling */
-  .Ordered-Item-image {
-    flex: 0 0 15%;
-    max-width: 100px;
-    margin-right: 1rem;
-  }
-  
-  /* Card Details (title, description, etc.) */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root Variables for Theming */
+:root {
+  --light-color: #e0f7fa; /* Light cyan background */
+  --dark-color: #00796b;  /* Teal text and accents */
+  --text-color: #333;     /* Dark gray text */
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+  background-color: var(--light-color);
+  line-height: 1.6;
+}
+
+/* Order Confirmation Section */
+.orderConfirm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: var(--light-color);
+  text-align: center;
+}
+
+.OrderTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+
+/* Order Container */
+.Order-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Ordered Cart Items */
+.Ordered-Cart-items {
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  transition: transform var(--transition-speed);
+}
+
+.Ordered-Cart-items:hover {
+  transform: translateY(-5px);
+}
+
+/* Ordered Card Item */
+.Ordered-carditem {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+.Ordered-carditem:last-child {
+  border-bottom: none;
+}
+
+.Ordered-Item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-right: 1rem;
+}
+
+.Ordered-Card-details {
+  flex: 1;
+}
+
+.Ordered-Name {
+  font-size: 1.2rem;
+  color: var(--dark-color);
+}
+
+.Ordered-Rate {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Ordered Total and Delivery */
+.Ordered-Total,
+.Ordered-deviler {
+  background-color: var(--dark-color);
+  color: #fff;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.Ordered-Total {
+  font-size: 1.5rem;
+}
+
+.Ordered-deviler {
+  font-size: 1rem;
+}
+
+/* Order History Title */
+.Ordered-history-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--dark-color);
+  margin: 2rem 0 1rem;
+}
+
+/* Ordered History Items */
+.ordered-history-items {
+  width: 100%;
+  max-width: 800px;
+}
+
+.order-history {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  transition: transform var(--transition-speed);
+}
+
+.order-history:hover {
+  transform: translateY(-5px);
+}
+
+.order-history-card {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+.order-history-card:last-child {
+  border-bottom: none;
+}
+
+.order-history-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-right: 1rem;
+}
+
+.order-history-details {
+  flex: 1;
+}
+
+.order-history-title {
+  font-size: 1.1rem;
+  color: var(--dark-color);
+}
+
+.order-history-description {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Responsive Styles */
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
   .Ordered-Card-details {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
   }
-  
-  /* Ordered Total Section */
-  .Ordered-Total {
-    width: 100%;
-    max-width: 800px;
-    background-color: var(--dark-color--);
-    color: white;
-    padding: 1.5rem;
-    text-align: center;
-    font-size: 2rem;
-    margin: 2rem 0;
-  }
-  
-  /* Delivery Info Section */
-  .Ordered-deviler {
-    width: 100%;
-    max-width: 800px;
-    background-color: var(--dark-color--);
-    color: white;
+
+  .Ordered-Name {
     font-size: 1rem;
-    padding: 0.5rem;
-    text-align: center;
-    margin-bottom: 2rem;
   }
-  
-  /* Order History Title */
+
+  .Ordered-Rate {
+    font-size: 0.9rem;
+  }
+
+  .Ordered-Total {
+    font-size: 1.2rem;
+  }
+
+  .Ordered-deviler {
+    font-size: 0.9rem;
+  }
+
   .Ordered-history-title {
-    width: 100%;
     font-size: 1.5rem;
-    font-weight: 800;
-    padding: 1rem;
-    text-align: center;
-    margin-top: 2rem;
   }
-  
-  /* Responsive Styles */
-  
-  /* Tablets (max-width: 768px) */
-  @media (max-width: 768px) {
-    .orderConfirm {
-      font-size: 3rem;
-      padding: 1rem;
-    }
-    .Ordered-carditem {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .Ordered-Item-image {
-      flex: 0 0 100%;
-      max-width: 100%;
-      margin: 0 auto 1rem;
-    }
-    .Ordered-Total,
-    .Ordered-deviler {
-      font-size: 1.5rem;
-      padding: 1rem;
-    }
+
+  .order-history-title {
+    font-size: 1rem;
   }
-  
-  /* Mobile Devices (max-width: 480px) */
-  @media (max-width: 480px) {
-    .orderConfirm {
-      font-size: 2.5rem;
-    }
-    .Ordered-Total {
-      font-size: 1.2rem;
-      padding: 0.75rem;
-    }
-    .Ordered-deviler {
-      font-size: 0.9rem;
-      padding: 0.5rem;
-    }
-    .Ordered-history-title {
-      font-size: 1.2rem;
-      padding: 0.5rem;
-    }
+
+  .order-history-description {
+    font-size: 0.8rem;
   }
-  
+}
+
+/* Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .OrderTitle {
+    font-size: 2rem;
+  }
+
+  .Ordered-Card-details {
+    flex: 1;
+  }
+
+  .Ordered-Name {
+    font-size: 0.9rem;
+  }
+
+  .Ordered-Rate {
+    font-size: 0.8rem;
+  }
+
+  .Ordered-Total {
+    font-size: 1rem;
+  }
+
+  .Ordered-deviler {
+    font-size: 0.8rem;
+  }
+
+  .Ordered-history-title {
+    font-size: 1.2rem;
+  }
+
+  .order-history-title {
+    font-size: 0.9rem;
+  }
+
+  .order-history-description {
+    font-size: 0.7rem;
+  }
+}

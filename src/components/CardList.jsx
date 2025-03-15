@@ -23,7 +23,7 @@ export default function CardMenu({ width, OpenCard }) {
               <img src={item.img} alt={item.title} className="Item-image" />
               <span className="Card-details">
                 <p className="Name">{item.title}</p>
-                <p className="Rate">${item.price}</p>
+                <p className="Rate">₹{item.price}</p>
                 <button onClick={() => dispatch(removeFromCart(item.id))}>Remove</button>
               </span>
             </div>
