@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Cart from './Cart';
+import NavBar from "./Nav"
+
 
 
 export default function ProductPage() {
@@ -21,22 +23,24 @@ export default function ProductPage() {
 
   return (
     <div>
+      <NavBar />
+
       <p>Protein Items</p>
       <ul>
-        
+
         <div className="Cart-container" id='Equipment'>
-          {data.personalcare.map((item, index) =>(
+          {data.personalcare.map((item, index) => (
             <Cart
-            key={index}
-            img={item.img}
-            price={item.price}
-            title={item.title}
-            description={item.description}
-             />
+              key={index}
+              img={item.img}
+              price={item.price}
+              title={item.title}
+              description={item.description}
+            />
           ))}
-          </div>
-        </ul>
-      
+        </div>
+      </ul>
+
     </div>
   );
 }

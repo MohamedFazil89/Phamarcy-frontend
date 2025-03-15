@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Cart from './Cart';
+import NavBar from "./Nav"
 
 
 export default function ProductPage() {
@@ -21,6 +22,7 @@ export default function ProductPage() {
 
   return (
     <div>
+      <NavBar />
       <p>Protein Items</p>
       <ul>
         

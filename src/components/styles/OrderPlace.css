@@ -1,66 +1,143 @@
-.orderConfirm{
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Order Confirmation Section */
+  .orderConfirm {
     background-color: var(--light-color--);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 2rem;
     font-size: 5rem;
     color: black;
     font-weight: 900;
-
-}
-
-
-.Order-container {
+  }
+  
+  /* Order Container (holds all ordered items) */
+  .Order-container {
     display: flex;
-}
-
-.Ordered-Cart-items {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  
+  /* Ordered Cart Items - a vertical list of items */
+  .Ordered-Cart-items {
     display: flex;
     flex-direction: column;
-
-}
-
-.Ordered-carditem {
-    margin: 2rem;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  /* Each Ordered Card Item */
+  .Ordered-carditem {
     display: flex;
-
-}
-
-
-.Ordered-Item-image {
-    width: 10%;
-}
-
-.Ordered-Card-details {
-}
-
-.Ordered-Name {}
-
-.Ordered-Rate {}
-
-.Ordered-Total {
-    width: 70%;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  
+  /* Item Image styling */
+  .Ordered-Item-image {
+    flex: 0 0 15%;
+    max-width: 100px;
+    margin-right: 1rem;
+  }
+  
+  /* Card Details (title, description, etc.) */
+  .Ordered-Card-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  /* Ordered Total Section */
+  .Ordered-Total {
+    width: 100%;
+    max-width: 800px;
     background-color: var(--dark-color--);
     color: white;
     padding: 1.5rem;
     text-align: center;
     font-size: 2rem;
-}
-.Ordered-deviler{
-    width: 70%;
+    margin: 2rem 0;
+  }
+  
+  /* Delivery Info Section */
+  .Ordered-deviler {
+    width: 100%;
+    max-width: 800px;
     background-color: var(--dark-color--);
     color: white;
     font-size: 1rem;
-    padding: .5rem;
-    text-align: center
-}
-
-.Ordered-history-title{
-    padding: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  /* Order History Title */
+  .Ordered-history-title {
     width: 100%;
     font-size: 1.5rem;
     font-weight: 800;
-}
-
-.ordered-history-items {}
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  /* Responsive Styles */
+  
+  /* Tablets (max-width: 768px) */
+  @media (max-width: 768px) {
+    .orderConfirm {
+      font-size: 3rem;
+      padding: 1rem;
+    }
+    .Ordered-carditem {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .Ordered-Item-image {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin: 0 auto 1rem;
+    }
+    .Ordered-Total,
+    .Ordered-deviler {
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+  }
+  
+  /* Mobile Devices (max-width: 480px) */
+  @media (max-width: 480px) {
+    .orderConfirm {
+      font-size: 2.5rem;
+    }
+    .Ordered-Total {
+      font-size: 1.2rem;
+      padding: 0.75rem;
+    }
+    .Ordered-deviler {
+      font-size: 0.9rem;
+      padding: 0.5rem;
+    }
+    .Ordered-history-title {
+      font-size: 1.2rem;
+      padding: 0.5rem;
+    }
+  }
+  
