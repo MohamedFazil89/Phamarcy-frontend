@@ -1,11 +1,13 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeFromCart } from "../redux/cartSlice";
+import { useNavigate } from 'react-router-dom';
 import "./styles/CardList.css";
 
 export default function CardMenu({ width, OpenCard }) {
-  const cartItems = useSelector(state => state.cart.cartItems); // Fetch cart items from Redux
-  const total = useSelector(state => state.cart.total); // Fetch total price
+  const Navigation = useNavigate();
+  const cartItems = useSelector(state => state.cart.cartItems); 
+  const total = useSelector(state => state.cart.total); 
   const dispatch = useDispatch();
 
   return (
@@ -31,7 +33,7 @@ export default function CardMenu({ width, OpenCard }) {
 
       <div className="total">
         <p>Total: ${total.toFixed(2)}</p>
-        <button>Buy Now</button>
+        <button onClick={() => Navigation("/OrderPlace")}>Buy Now</button>
       </div>
     </div>
   );

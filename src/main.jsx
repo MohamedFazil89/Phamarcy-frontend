@@ -9,6 +9,7 @@ import PersonalCare from "./components/personalcare"
 import MedicalDevice from "./components/medicaldevices"
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import OrderPlace from "./components/OrderPlace";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -21,6 +22,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/BabyCare" element={<BabyCare />} />
           <Route path="/PersonalCare" element={<PersonalCare />} />
           <Route path="/MedicalDevice" element={<MedicalDevice />} />
+          <Route path="/OrderPlace" element={<OrderPlace />} />
+
 
         </Routes>
       </BrowserRouter>

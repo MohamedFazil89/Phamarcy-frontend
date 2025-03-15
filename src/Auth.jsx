@@ -11,6 +11,7 @@ const Login = () => {
   const [errorMessage, setErrorMessage] = useState(''); // Error message state
 
 
+
   // Register user API call
   const PostDate = async (email, password) => {
     try {
@@ -20,7 +21,7 @@ const Login = () => {
       });
       alert("User registration successful");
       console.log(response);
-      Navigation("/Home")
+      Navigation("/Home");
     } catch (err) {
       setErrorMessage('Registration failed: ' + err.message);
       console.log(err);
@@ -28,6 +29,7 @@ const Login = () => {
 
     }
   };
+
 
   // Login user API call
   const CheckData = async (email, password) => {
@@ -42,6 +44,7 @@ const Login = () => {
 
      }
       console.log(response.data);
+
     } catch (err) {
       setErrorMessage('Login failed: ' + err.message);
       console.log(err);

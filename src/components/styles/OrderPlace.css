@@ -1,0 +1,66 @@
+.orderConfirm{
+    background-color: var(--light-color--);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 5rem;
+    color: black;
+    font-weight: 900;
+
+}
+
+
+.Order-container {
+    display: flex;
+}
+
+.Ordered-Cart-items {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Ordered-carditem {
+    margin: 2rem;
+    display: flex;
+
+}
+
+
+.Ordered-Item-image {
+    width: 10%;
+}
+
+.Ordered-Card-details {
+}
+
+.Ordered-Name {}
+
+.Ordered-Rate {}
+
+.Ordered-Total {
+    width: 70%;
+    background-color: var(--dark-color--);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+.Ordered-deviler{
+    width: 70%;
+    background-color: var(--dark-color--);
+    color: white;
+    font-size: 1rem;
+    padding: .5rem;
+    text-align: center
+}
+
+.Ordered-history-title{
+    padding: 1rem;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.ordered-history-items {}
