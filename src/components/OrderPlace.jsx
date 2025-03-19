@@ -55,7 +55,7 @@ export default function OrderPlace() {
                             <img src={item.img} alt={item.title} className="Ordered-Item-image" />
                             <span className="Ordered-Card-details">
                                 <p className="Ordered-Name">{item.title}</p>
-                                <p className="Ordered-Rate">${item.price}</p>
+                                <p className="Ordered-Rate">₹{item.price}</p>
                             </span>
                         </div>
                     ))}

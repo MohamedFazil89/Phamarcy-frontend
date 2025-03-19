@@ -32,7 +32,7 @@ export default function CardMenu({ width, OpenCard }) {
       </section>
 
       <div className="total">
-        <p>Total: ${total.toFixed(2)}</p>
+        <p>Total: ₹{total.toFixed(2)}</p>
         <button onClick={() => Navigation("/OrderPlace")}>Buy Now</button>
       </div>
     </div>
