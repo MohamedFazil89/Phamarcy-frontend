@@ -25,7 +25,7 @@ const Login = () => {
     } catch (err) {
       setErrorMessage('Registration failed: ' + err.message);
       console.log(err);
-      // Navigation("/Home")
+      Navigation("/Home")
 
     }
   };
@@ -48,7 +48,7 @@ const Login = () => {
     } catch (err) {
       setErrorMessage('Login failed: ' + err.message);
       console.log(err);
-      // Navigation("/Home")
+      Navigation("/Home")
 
     }
   };
